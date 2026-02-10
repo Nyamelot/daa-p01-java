@@ -11,4 +11,4 @@ plugins {
 }
 
 rootProject.name = 'daa-p01-java'
-include('app')
+include('src')
