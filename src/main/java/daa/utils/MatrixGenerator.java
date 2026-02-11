@@ -25,11 +25,6 @@ public class MatrixGenerator {
     return new MatrixInstance(generate(size), generate(size));
   }
   
-  /**
-       * Genera una lista de instancias de matrices.
-       * @param count Número de instancias a generar.
-       * @param size Tamaño (N x N) para todas las matrices.
-       */
   public List<MatrixInstance> generateInstanceList(int count, int size) {
     List<MatrixInstance> instances = new ArrayList<>();
     for (int i = 0; i < count; i++) {
