@@ -1,6 +1,9 @@
 package daa.utils;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.random.RandomGenerator;
+import daa.model.strategypattern.instances.MatrixInstance;
 
 public class MatrixGenerator {
   private int randomNumber() {
@@ -16,5 +19,32 @@ public class MatrixGenerator {
       }
     }
     return matrix;
+  }
+  
+  public MatrixInstance generateInstance(int size) {
+    return new MatrixInstance(generate(size), generate(size));
+  }
+  
+  /**
+       * Genera una lista de instancias de matrices.
+       * @param count Número de instancias a generar.
+       * @param size Tamaño (N x N) para todas las matrices.
+       */
+  public List<MatrixInstance> generateInstanceList(int count, int size) {
+    List<MatrixInstance> instances = new ArrayList<>();
+    for (int i = 0; i < count; i++) {
+      instances.add(generateInstance(size));
+    }
+    return instances;
+  }
+  
+  public List<MatrixInstance> generateVariedInstanceList(int startSize, int step, int count) {
+    List<MatrixInstance> instances = new ArrayList<>();
+    int currentSize = startSize;
+    for (int i = 0; i < count; i++) {
+      instances.add(generateInstance(currentSize));
+      currentSize += step;
+    }
+    return instances;
   }
 }
