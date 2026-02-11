@@ -1,9 +1,7 @@
 package daa;
 
-import java.util.List;
 import daa.utils.MatrixGenerator;
 import daa.controller.EvaluateAlgorithms;
-import daa.model.strategypattern.instances.MatrixInstance;
 import daa.model.strategypattern.algorithms.MatrixColumnProductAlgorithm;
 import daa.model.strategypattern.algorithms.MatrixRowProductAlgorithm;
 
